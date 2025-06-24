@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a personal website developed to provide students with essential information about my role as a Teaching Assistant for E115 at [University Name]. The website includes my contact details, office hours, and a curated list of programming and learning resources to assist students in their academic journey.
+This project is a personal website developed to provide students with essential information about my role as a Teaching Assistant for E115 at NCSU. The website includes my contact details, office hours, and a curated list of programming and learning resources to assist students in their academic journey.
 
 ## Features
 
