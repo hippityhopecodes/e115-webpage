@@ -1,0 +1,10 @@
+p {
+    font-family: Times; 
+    font-size: 16; 
+    color: #000000;
+}
+
+#photo-resize {
+    max-width: 250px;
+    max-height: 300px;
+}
