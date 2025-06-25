@@ -1,10 +1,240 @@
-p {
-    font-family: Times; 
-    font-size: 16; 
-    color: #000000;
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #111915;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    color: #e0f2e9;
+    min-height: 100vh;
 }
 
-#photo-resize {
-    max-width: 250px;
-    max-height: 300px;
+a {
+    color: #62e37a;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #35c856;
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 40px;
+    padding: 20px;
+    background: #171e1a;
+    border-radius: 24px;
+    box-shadow: 0 6px 32px 0 rgba(31,54,43,0.55);
+}
+
+.profile-card {
+    flex: 1 1 290px;
+    max-width: 320px;
+    min-width: 260px;
+    background: linear-gradient(135deg, #122518 85%, #16351d 100%);
+    border-radius: 18px;
+    box-shadow: 0 2px 16px 0 rgba(80,200,123,.13);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 24px 24px 24px;
+    box-sizing: border-box;
+}
+
+.profile-details {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-details h1 {
+    margin: 0 0 4px 0;
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: #bafdc2;
+    letter-spacing: .5px;
+}
+
+.profile-details h2 {
+    margin: 0 0 4px 0;
+    font-size: 1.1rem;
+    color: #62e37a;
+    font-weight: 500;
+}
+
+.profile-details .subdued {
+    color: #81b69d;
+    font-size: 0.99rem;
+    margin-bottom: 12px;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 14px 0;
+    width: 100%;
+    font-size: 1.04rem;
+    color: #e0f2e9;
+    text-align: left;
+}
+
+.info-list li {
+    margin-bottom: 4px;
+}
+
+.muted {
+    color: #649975;
+    font-size: .95em;
+}
+
+.office-hours {
+    margin-top: 12px;
+    width: 100%;
+}
+
+.office-hours h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.07rem;
+    color: #80ef97;
+}
+
+.office-hours ul {
+    padding-left: 22px;
+    margin: 0;
+    color: #bafdc2;
+}
+
+.email-response {
+    margin-top: 16px;
+    font-size: 0.92rem;
+    width: 100%;
+}
+
+.highlight {
+    background: #254d35;
+    color: #80ef97;
+    border-radius: 4px;
+    padding: 2px 7px;
+    font-weight: 500;
+    display: inline-block;
+    margin: 3px 0;
+}
+
+.photo-container {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    margin-bottom: 0;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 148px;
+    height: 148px;
+    object-fit: cover;
+    object-position: center 22%;
+    border: 5px solid #214c29;
+    box-shadow: 0 1px 13px rgba(44, 98, 48, 0.23);
+    background: #184f2d;
+    transition: filter 0.25s, transform 0.25s;
+    display: block;
+}
+
+.profile-img:hover {
+    filter: brightness(1.12) contrast(1.04);
+    transform: scale(1.04) rotate(-2deg);
+}
+
+/* Main content/table */
+.main-content {
+    flex: 3 1 600px;
+    min-width: 0;
+}
+
+.main-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 0;
+    color: #80ef97;
+    text-shadow: 0 2px 8px #07281372;
+}
+
+.main-content p {
+    font-size: 1.07rem;
+    line-height: 1.6;
+    color: #b7dbc8;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 16px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    min-width: 420px;
+    border-collapse: collapse;
+    background: #141d16;
+    border-radius: 12px;
+    box-shadow: 0 1px 9px rgba(44, 102, 58, 0.13);
+    font-size: 1rem;
+}
+
+table thead th {
+    background: #193f2c;
+    color: #84fa9e;
+    font-weight: 700;
+    text-align: left;
+    padding: 16px 12px;
+    font-size: 1.05rem;
+    letter-spacing: .8px;
+    border-bottom: 2px solid #2fbd63;
+}
+
+table tbody td {
+    padding: 12px 12px;
+    background: #18251c;
+    border-bottom: 1px solid #1b3924;
+    color: #e0f2e9;
+    vertical-align: top;
+    transition: background 0.18s;
+    word-break: break-word;
+}
+
+table tbody tr:nth-child(even) td {
+    background: #184625;
+}
+
+table tbody tr:hover td {
+    background: #2e6b42;
+}
+
+table td:first-child {
+    font-weight: 600;
+    color: #80ef97;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        gap: 32px;
+        padding: 10px;
+    }
+    .profile-card, .main-content {
+        max-width: 100%;
+        min-width: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    /** */
 }
